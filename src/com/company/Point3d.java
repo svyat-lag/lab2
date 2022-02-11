@@ -1,6 +1,7 @@
 package com.company;
 
 import static java.lang.Math.sqrt;
+import static java.lang.Math.toRadians;
 
 // Let user create 3D-point object & get or set its coordinates
 // & calculate distance between two objects (3D-points) & calculate the area of a triangle
@@ -32,6 +33,7 @@ public class Point3d {
         return zCoordinate;
     }
 
+
     // Set the current coordinate of the current 3D-point
     public void setX(double xCoordinate){
         this.xCoordinate = xCoordinate;
@@ -41,6 +43,14 @@ public class Point3d {
     }
     public void setZ(double zCoordinate){
         this.zCoordinate = zCoordinate;
+    }
+
+    // Defines whether one point is equal to another one or not
+    public boolean equalTo(Point3d point1){
+        if ((point1.getX() == this.getX()) && (point1.getY() == this.getY()) && (point1.getZ() == this.getZ()))
+            return true;
+        else
+            return false;
     }
 
     // Calculates distance between to points
@@ -55,7 +65,7 @@ public class Point3d {
         double a = distanceTo(point1, point2);
         double b = distanceTo(point2, point3);
         double c = distanceTo(point1, point3);
-        double p = (a+b+c)/2;
+        double p = (a + b + c) / 2;
         return sqrt(p * (p - a) * (p - b) * (p - c));
     }
 }
