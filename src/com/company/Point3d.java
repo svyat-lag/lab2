@@ -1,7 +1,6 @@
 package com.company;
 
 import static java.lang.Math.sqrt;
-import static java.lang.Math.toRadians;
 
 // Let user create 3D-point object & get or set its coordinates
 // & calculate distance between two objects (3D-points) & calculate the area of a triangle
