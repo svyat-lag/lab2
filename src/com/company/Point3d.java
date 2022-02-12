@@ -5,15 +5,12 @@ import static java.lang.Math.toRadians;
 
 // Let user create 3D-point object & get or set its coordinates
 // & calculate distance between two objects (3D-points) & calculate the area of a triangle
-public class Point3d {
-    private static double xCoordinate;
-    private static double yCoordinate;
-    private static double zCoordinate;
+public class Point3d extends Point2d {
+    private double zCoordinate;
 
     // Defines 3D-point's model with coordinates
     public Point3d(double xCoordinate, double yCoordinate, double zCoordinate){
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+        super(xCoordinate, yCoordinate);
         this.zCoordinate = zCoordinate;
     }
 
@@ -23,24 +20,11 @@ public class Point3d {
     }
 
     // Get the current coordinate of the current 3D-point
-    public double getX(){
-        return xCoordinate;
-    }
-    public double getY(){
-        return yCoordinate;
-    }
     public double getZ(){
         return zCoordinate;
     }
 
-
     // Set the current coordinate of the current 3D-point
-    public void setX(double xCoordinate){
-        this.xCoordinate = xCoordinate;
-    }
-    public void setY(double yCoordinate){
-        this.yCoordinate = yCoordinate;
-    }
     public void setZ(double zCoordinate){
         this.zCoordinate = zCoordinate;
     }
