@@ -37,14 +37,14 @@ public class Point3d extends Point2d {
     }
 
     // Calculates distance between to points
-    public double distanceTo(Point3d point1, Point3d point2){
+    public static double distanceTo(Point3d point1, Point3d point2){
         double x1 = point1.getX(), y1 = point1.getY(), z1 = point1.getZ();
         double x2 = point2.getX(), y2 = point2.getY(), z2 = point2.getZ();
         return sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1) + (z2-z1)*(z2-z1));
     }
 
     // Calculates the area of a triangle given by three points
-    public double computeArea(Point3d point1, Point3d point2, Point3d point3){
+    public static double computeArea(Point3d point1, Point3d point2, Point3d point3){
         double a = distanceTo(point1, point2);
         double b = distanceTo(point2, point3);
         double c = distanceTo(point1, point3);
